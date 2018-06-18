@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class WorldTickSystem : MonoBehaviour, ITick {
 
-	private float currentTime = 0;
+    private float currentTime = 0;
 
 
-	private static bool exists = false;
-    private void Awake()
-    {
+    private static bool exists = false;
+    private void Awake() {
         if (!exists)
         {
             DontDestroyOnLoad(this.gameObject);
@@ -18,17 +17,16 @@ public class WorldTickSystem : MonoBehaviour, ITick {
         }
     }
 
-	private void Update () {
-		CalculateTicks();
-	}
+    private void Update () {
+	CalculateTicks();
+    }
 
-    public void CalculateTicks()
-    {
+    public void CalculateTicks() {
         currentTime += Time.deltaTime;
-		if(currentTime >= TickProperties.worldTickLength) {
-			currentTime = 0f;
-			TickProperties.ticksSinceLaunch++;
-		}
+	if(currentTime >= TickProperties.worldTickLength) {
+		currentTime = 0f;
+		TickProperties.ticksSinceLaunch++;
+	}
     }
 
 }
