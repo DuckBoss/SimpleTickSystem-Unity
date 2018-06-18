@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Use this script to output debug values to a TextMeshPro UI Text.
+
 public class FarmingTickUI : MonoBehaviour {
 
     public TMP_Text UI_Text;
