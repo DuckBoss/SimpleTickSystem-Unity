@@ -64,7 +64,7 @@ public class FarmingGrowthSystem : MonoBehaviour, ITick, IGrowable {
 
 	public void CalculateTicks() {
         _currentTime += Time.deltaTime;
-		if(_currentTime >= TickProperties.farmingTickLength) {
+		if(_currentTime >= FarmingTickProperties.farmingTickLength) {
 			_currentTime = 0f;
 			_ticksSinceGrowth++;
 		}
