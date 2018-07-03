@@ -15,7 +15,7 @@ public class FarmingTickUI : MonoBehaviour {
                         $"Ticks Per Growth Phase: {FarmScript.TicksPerGrowthPhase}\n " +
                         $"Current Growth Phase: {FarmScript.CurrentGrowthPhase}\n " +
                         $"Max Growth Phase: {FarmScript.MaxGrowthPhases}\n" +
-                        $"Farming Tick Length: {TickProperties.farmingTickLength}\n";
+                        $"Farming Tick Length: {FarmingTickProperties.farmingTickLength}\n";
 
         UI_Text.text = toPrint;
     }
